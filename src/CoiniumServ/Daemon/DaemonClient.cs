@@ -267,6 +267,7 @@ namespace CoiniumServ.Daemon
                 // peercoin variants instead require mode: https://github.com/Peerunity/Peerunity/blob/master/src/bitcoinrpc.cpp#L2206
                 data.Add("mode", "template");
             }
+            data.Add("rules",new[] { "segwit" });
 
             return MakeRequest<BlockTemplate>("getblocktemplate", data);
         }
